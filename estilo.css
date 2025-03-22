@@ -1,0 +1,520 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(85deg, #022968, #00203F);
+    overflow: hidden; /* Evita que a barra de rolagem apareça */
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(85deg, #022968, #00203F);
+    text-align: center;
+    padding-left: 1px;
+    color: white;
+    position: flex;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+/* Caixa de convite flutuante acima do botão "Pyra" */
+.convite-pyra {
+    position: absolute;
+    top: 50%; /* Ajuste para ficar acima do botão */
+    left: 20%;
+    transform: translateX(-50%);
+    background: rgba(178, 34, 34, 0.9); /* Bordô com leve transparência */
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    width: 260px;
+    box-shadow: 0 0 12px rgba(255, 69, 0, 0.6);
+    z-index: 10;
+    animation: pulse 2s infinite alternate;
+}
+
+/* Efeito de brilho sutil */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(255, 69, 0, 0.8);
+    }
+}
+
+/* Seta apontando para o botão */
+.convite-pyra::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(178, 34, 34, 0.9);
+}
+.convite-carreiras {
+    position: absolute;
+    top: 53%; /* Ajuste para ficar acima do botão */
+    left: 79%;
+    transform: translateX(-50%);
+    background: rgba(178, 34, 34, 0.9); /* Bordô com leve transparência */
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    width: 260px;
+    box-shadow: 0 0 12px rgba(255, 69, 0, 0.6);
+    z-index: 10;
+    animation: pulse 2s infinite alternate;
+}
+
+/* Efeito de brilho sutil */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(255, 69, 0, 0.8);
+    }
+}
+
+/* Seta apontando para o botão */
+.convite-carreiras::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(178, 34, 34, 0.9);
+}
+/* Caixa de convite flutuante ao lado do botão Cronograma */
+.convite-cronograma-esq, .convite-cronograma-dir {
+    position: absolute;
+    top: 89%;
+    transform: translateY(-50%);
+    background: rgba(178, 34, 34, 0.9); /* Bordô com leve transparência */
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    width: 228px;
+    box-shadow: 0 0 12px rgba(255, 69, 0, 0.6);
+    z-index: 10;
+    animation: pulse 2s infinite alternate;
+}
+
+/* Efeito de brilho sutil */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(255, 69, 0, 0.8);
+    }
+}
+
+/* Seta apontando para o botão Cronograma */
+.convite-cronograma-esq::after, .convite-cronograma-dir::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+/* Ajustes individuais para os convites */
+.convite-cronograma-esq {
+    left: 22%;
+}
+
+.convite-cronograma-esq::after {
+    right: -10px;
+    border-left: 10px solid rgba(178, 34, 34, 0.9);
+}
+
+.convite-cronograma-dir {
+    right: 22%;
+}
+
+.convite-cronograma-dir::after {
+    left: -10px;
+    border-right: 10px solid rgba(178, 34, 34, 0.9);
+}
+
+.inicio_cronograma, .carreiras, .informacao {
+    text-align: center;
+    position: absolute;
+    margin: 0;
+    padding: 15px;
+    font-size: 1.5em;
+    text-align: center;
+    width: 260px;
+    border: 2px solid rgba(255, 255, 255, 0.7); /* Borda branca translúcida */
+    border-radius: 40px;
+    background-color: transparent; /* Fundo transparente */
+    color: white; /* Texto branco */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 3;
+}
+
+.inicio_cronograma:hover, .carreiras:hover, .informacao:hover {
+    background-color:#B22222; /* Efeito de hover com leve transparência */
+    color: #fff;
+}
+
+.inicio_cronograma {
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.carreiras {
+    top: 64%;
+    left: 79%;
+    transform: translateX(-50%);
+}
+
+.informacao {
+    top: 64%;
+    left: 20%;
+    transform: translateX(-50%);
+}
+
+/* Estilo para o container da imagem */
+.imagem-container {
+    position: absolute;
+    bottom: 20px; /* Ajusta a posição para um pouco mais para cima */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza a imagem horizontalmente */
+    width: 80%; /* Ajuste a largura da imagem se necessário */
+    text-align: center;
+    z-index: 1; /* Garante que a imagem fique atrás do botão */
+}
+
+/* Estilo da imagem */
+.imagem-rodape {
+    width: 50%; /* Ajuste o tamanho da imagem */
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do container */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+.mes{
+display: absolute;
+width: 140px;
+margin:0 auto ;
+color: white;
+height: 100px auto;
+top: 150px;
+
+
+}
+.calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    padding: 40px;
+    max-width: 700px;
+    margin: 150px auto;
+    background-color: #800020;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dia-semana {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.dia {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dia:hover {
+    background-color: #e0e0e0;
+}
+
+.formulario {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    display: none; /* Começa escondido */
+    text-align: center;
+}
+
+/* 🔹 Estilização da Roleta */
+/* 🔹 Contêiner da roleta com barra de rolagem */
+.roleta-container {
+    width: 100%;
+    height: 150px; /* Define uma altura fixa */
+    overflow-y: auto; /* Adiciona a barra de rolagem vertical */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    cursor: grab;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #4CAF50 #ddd; /* Cor da barra de rolagem */
+}
+
+/* 🔹 Estilização da barra de rolagem no Chrome */
+.roleta-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.roleta-container::-webkit-scrollbar-thumb {
+    background-color: #4CAF50;
+    border-radius: 5px;
+}
+
+.roleta-container::-webkit-scrollbar-track {
+    background: #ddd;
+}
+
+/* 🔹 Itens da roleta */
+#roleta-materias {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#roleta-materias li {
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🔹 Matéria selecionada fica destacada */
+#roleta-materias li.selecionado {
+    background: #4CAF50;
+    color: white;
+    font-size: 18px;
+}
+
+/* 🔹 Estilização dos Inputs */
+.formulario input,
+.formulario select {
+    width: 95%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 🔹 Botões */
+.botoes-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.formulario button:nth-child(2) {
+    background-color: #f44336;
+}
+
+.formulario button:hover {
+    opacity: 0.8;
+}
+
+
+.sidebar {
+    width: 200px;
+    background:#800020;
+    height: 100vh;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+}
+.planejativo {
+    text-align: center; /* Garante que o texto esteja no centro */
+    font-size: 22px; /* Ajuste o tamanho da fonte */
+    font-weight: bold;
+    color: white;
+    background-color: #800020; /* Opcional, para destacar */
+    padding: 20px; /* Adiciona um espaçamento interno */
+   /* Ajuste o valor para controlar o arredondamento */
+}
+
+/* Cabeçalho do menu */
+/* Estilo para a sidebar (o quadrado vermelho) */
+.sidebar {
+    background-color: #800020; /* Cor de fundo vermelha */
+    padding: 10px;
+  /* Borda arredondada */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para dar um destaque */
+}
+
+/* Caso você queira arredondar a div da sidebar-header também */
+
+/* Outras classes podem precisar de ajustes, dependendo do design que você deseja */
+
+/* Ícones e espaçamento */
+.menu li a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.menu li a:hover {
+    background-color: pink; /* Cor de fundo branca */
+    color: black;  /* Cor do texto preta */
+    transform: scale(1.0);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu li a:active {
+    background-color: #800020; /* Bordô */
+    transform: scale(0.95);
+}
+
+/* Submenu oculto */
+.submenu {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+}
+
+.submenu li {
+    padding: 8px 10px;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/* Ícones */
+.icon {
+    margin-right: 10px;
+}
+
+/* Botão de fechar */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+.sessao-exibicao {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sessao-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sessao-item .materia,
+.sessao-item .horario,
+.sessao-item .tipo {
+    font-weight: bold;
+    color: #333;
+}
+
+.sessao-item .tipo {
+    color: #4CAF50; /* Diferencia o tipo de sessão */
+}
+
+.sessao-item:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.sessao-item .materia,
+.sessao-item .horario {
+    color: #800020;
+}
+.botoes-navegacao {
+    display: flex;
+    justify-content: space-between;
+}
+
+.botoes-navegacao button {
+    padding: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.botoes-navegacao button:nth-child(2) {
+    background-color: #f44336;
+}
+
+.botoes-navegacao button:hover {
+    opacity: 0.8;
+}
+
+#mensagem-sucesso {
+    color: green;
+    font-weight: bold;
+}
+
+#mensagem-erro {
+    color: red;
+    font-weight: bold;
+}
+
