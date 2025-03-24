@@ -35,6 +35,28 @@ header {
     z-index: 10;
     animation: pulse 2s infinite alternate;
 }
+.botao-comece {
+    position: absolute;
+    top: 40%; /* Ajuste conforme necessário */
+    left: 20%;
+    transform: translateX(-50%);
+    background: rgba(178, 34, 34, 0.9); /* Bordô com leve transparência */
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    width: 260px;
+    box-shadow: 0 0 12px rgba(255, 69, 0, 0.6);
+    z-index: 10;
+    animation: pulse 2s infinite alternate;
+    cursor: pointer;
+}
+
+.botao-comece:hover {
+    background: rgba(255, 69, 0, 0.9); /* Tom mais vibrante no hover */
+}
 
 /* Efeito de brilho sutil */
 @keyframes pulse {
