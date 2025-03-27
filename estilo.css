@@ -35,9 +35,15 @@ header {
     z-index: 10;
     animation: pulse 2s infinite alternate;
 }
-.botao-comece {
+
+.container {
+    text-align: flex;
+    margin-top: 50px;
+}
+
+.frase-motivadora {
     position: absolute;
-    top: 40%; /* Ajuste conforme necessário */
+    top: 15%; /* Ajuste para ficar acima do botão */
     left: 20%;
     transform: translateX(-50%);
     background: rgba(178, 34, 34, 0.9); /* Bordô com leve transparência */
@@ -51,12 +57,19 @@ header {
     box-shadow: 0 0 12px rgba(255, 69, 0, 0.6);
     z-index: 10;
     animation: pulse 2s infinite alternate;
-    cursor: pointer;
+}
+.frase-motivadora::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(178, 34, 34, 0.9);
 }
 
-.botao-comece:hover {
-    background: rgba(255, 69, 0, 0.9); /* Tom mais vibrante no hover */
-}
+
 
 /* Efeito de brilho sutil */
 @keyframes pulse {
@@ -175,7 +188,7 @@ header {
     border-right: 10px solid rgba(178, 34, 34, 0.9);
 }
 
-.inicio_cronograma, .carreiras, .informacao {
+.inicio_cronograma, .carreiras, .informacao, .botao-comece {
     text-align: center;
     position: absolute;
     margin: 0;
@@ -192,11 +205,16 @@ header {
     z-index: 3;
 }
 
-.inicio_cronograma:hover, .carreiras:hover, .informacao:hover {
+.inicio_cronograma:hover, .carreiras:hover, .informacao:hover, .botao-comece:hover {
     background-color:#B22222; /* Efeito de hover com leve transparência */
     color: #fff;
 }
 
+.botao-comece{
+    top: 38%;
+    left:20%;
+    transform: translateX(-50%);
+}
 .inicio_cronograma {
     top: 85%;
     left: 50%;
