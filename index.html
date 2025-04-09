@@ -28,32 +28,34 @@
         Mantenha seu planejamento sempre à vista! ✅
     </div>
 
-    <div class="inicio_cronograma" onclick="abrirPagina('Phoenix/cronograma.html')">Cronograma</div>
+    <!-- Botões com redirecionamento -->
+    <div class="inicio_cronograma" onclick="abrirPagina('cronograma.html')">Cronograma</div>
     <div class="carreiras" onclick="abrirPagina('https://www.vagas.com.br/mapa-de-carreiras/')">Mapa de Carreiras</div>
     <div class="informacao" onclick="abrirPagina('informacao.html')">Pyra</div>
 
-
-    
     <div class="container">
-    <p class="frase-motivadora">
-        💡 Dê o primeiro passo na programação! Python é a chave para transformar ideias em realidade. 
-        Comece agora e explore um mundo de possibilidades!
-    </p>
-    <button class="botao-comece" onclick="abrirPagina('comece.html')">Comece Agora</button>
-</div>
-
-
-
-
+        <p class="frase-motivadora">
+            💡 Dê o primeiro passo na programação! Python é a chave para transformar ideias em realidade. 
+            Comece agora e explore um mundo de possibilidades!
+        </p>
+        <button class="botao-comece" onclick="abrirPagina('comece.html')">Comece Agora</button>
+    </div>
 </div>
 
 <div class="imagem-container">
     <img src="images/fenix.png" alt="Imagem" class="imagem-rodape">
 </div>
 
+<!-- Script corrigido -->
 <script>
     function abrirPagina(pagina) {
-        window.location.href = pagina;
+        const pathParts = window.location.pathname.split('/');
+        const base = pathParts[1]; // Ex: "Phoenix"
+        if (pagina.startsWith('http')) {
+            window.location.href = pagina; // redirecionamento externo
+        } else {
+            window.location.href = `/${base}/${pagina}`;
+        }
     }
 </script>
 
